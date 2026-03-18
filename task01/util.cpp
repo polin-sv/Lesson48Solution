@@ -36,3 +36,27 @@ string convert(int array[], int length) {
 
 	return s;
 }
+
+string get_time(long long start, long long finish) {
+	if (start > finish) {
+		long long t = start;
+		start = finish;
+		finish = t;
+	}
+
+	string result = "";
+
+	long long time = finish - start;
+
+	result += to_string(time / 3600);
+	long long min = time % 3600 / 60;
+	result += ":";
+	result += (min < 10 ? "0" : "");
+	result += to_string(min);
+	long long sec = time % 3600 / 60;
+	result += ":";
+	result += (sec < 10 ? "0" : "");
+	result += to_string(sec);
+
+	return result;
+}

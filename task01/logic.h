@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#define DEFAULT_SIZE 1'000
+#define DEFAULT_SIZE 100'000
 
 using namespace std;
 

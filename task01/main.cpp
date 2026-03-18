@@ -1,6 +1,8 @@
 #include "util.h"
 
 int main() {
+	srand(time(NULL));
+
 	int array[DEFAULT_SIZE];
 	int size;
 
@@ -8,15 +10,20 @@ int main() {
 	cin >> size;
 	init_random(array, size, 0, 100);
 
-	print("befour sourting:\n");
-	print(convert(array, size));
+	//print("befour sourting:\n");
+	//print(convert(array, size));
+
+	long long start = time(NULL);
 
 	sort_bubble(array, size);
-	print("\n\nafter:\n");
-	print(convert(array, size));
 
+	long long finish = time(NULL);
 
-	sort_bubble(array, size);
+	print(get_time(start, finish));
+
+	//print("\n\nafter:\n");
+	//print(convert(array, size))
+
 
 
 	return 0;
