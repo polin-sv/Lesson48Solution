@@ -53,7 +53,7 @@ string get_time(long long start, long long finish) {
 	result += ":";
 	result += (min < 10 ? "0" : "");
 	result += to_string(min);
-	long long sec = time % 3600 / 60;
+	long long sec = time % 60;
 	result += ":";
 	result += (sec < 10 ? "0" : "");
 	result += to_string(sec);
